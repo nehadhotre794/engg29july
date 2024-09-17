@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title> Engg App </title>
+		<style>
+			*{font-size:40px; font-family:Times Roman;}
+			body{background-color:linen;}
+			input[type="radio"] {height:0.5em; width:2%;}
+			h1 {background-color:black; color:white; width:60%; height:9.5%;}
+			
+		</style>
+	</head>
+
+	<body>
+		<center>
+			<h1> Engg App by Neha</h1>
+			<form onsubmit="show()">
+				<label for="name">Name :</label>
+				<input type="text" placeholder="enter your name" id="name"/>
+				</br></br>
+				<label for="eyear">Engg Year :</label>
+				<select id="eyear">
+					<option value="fe">FE</option>
+					<option value="se">SE</option>
+					<option value="te">TE</option>
+					<option value="be">BE</option>
+				</select>
+				</br></br>
+				<input type="submit"/>	
+			</form>
+				<h2 id="msg"/>
+			<script>
+				function show()
+				{
+					event.preventDefault();
+					let name= document.getElementById("name");
+					let eyear= document.getElementById("eyear");
+					let msg= document.getElementById("msg");
+
+					if(name.value==="")
+					{
+						alert(" Please enter your name");
+						msg.innerHTML="";
+						name.focus();
+						return;
+					}
+					
+						
+					let a= "name = " +name.value+ " Engineering Year = "  +eyear.value;
+					msg.innerHTML =a;
+
+				}
+			</script>
+		</center>
+
+	</body>
+
+
+</html>
